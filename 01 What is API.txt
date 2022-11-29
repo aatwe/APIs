@@ -1,0 +1,23 @@
+What is API?
+Set of  commands,functions,protocols and objects  used to interact with external system(below case) / make software(JQuery is an API,we use it write code for our software)
+
++-
+weather section on yahoo -> location specific
+how yahoo gets this data? weather api of Openweather
+
+
+tinder asks FB for piece of data on user and populates its profiles
+
+
+murder api
+People use police.uk api for murders
+murdermap.com uses police api and maps all data by location
+
+people use it to find safest place to live
+
+
+
+Why use API?
+Some data is accessible, Some data is offlimits
+Find which data is accessible?
+They provide a menu , use menu to access that data 	

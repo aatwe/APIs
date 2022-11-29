@@ -1,0 +1,27 @@
+TIP: Use JSON Viewer Awesome
+	Tree + Chart + JSON Input
+	For each line you have options to
+			a) Copy value
+			b) Copy path
+
+
+What format do we receive data from API? JSON , XML,HTML
+
+Why JSON favoured :  readable by human,collapsable to least space,easy to convert back to JS object
+
+JSON = javascript Object Notation
+		//looks like JS objects //little differences
+
+Why use JSON?
+	object -> collapsed JSON -> Object
+
+
+JS object
+var wardrobe = {
+	doors: 2,
+	drawers:2,
+	color: "red"
+}
+
+JSON
+{doors: 2,drawers: 2, color:"red"}

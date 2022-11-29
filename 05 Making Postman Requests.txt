@@ -1,0 +1,25 @@
+Postman helps easily structure url for api call by providing inputs and test
+1)Create new request
+
+
+2) What type of request? GET 
+	//to get data from openweather
+
+3) Paste API End point part in get request
+
+4) Add parameters
+	a) first parameter = q
+			Key =q		Value = London  	Descriptiion = 
+	b) second parameter = appid = api key
+			Key = appid	Value = erwheiuhdafiauy9678979
+	c) Third parameter = units
+			Key = metric
+
+
+-> Send //Request
+
+Output:
+Data
+//what is this data? structured	//why? pretty printing results
+				//what default output data structure? JSON
+				

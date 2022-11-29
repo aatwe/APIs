@@ -1,0 +1,40 @@
+1) Scenario:
+	Postman api is able to test
+	we can get back some data
+	we copy the url and use in node https module (note paste with https://)
+
+const express = require("express"));
+const https = require("https");
+//why no install? native node module already bundled
+const app = express();
+
+app.get("/", function(req,res){
+
+  https.get("//paste your postman api url", function(response)) {
+		console.log(response);
+		console.log(response.statusCode)
+		repsonse.on("data", function(data){
+			console.log(data);  	
+			//alternative
+				const weatherData = JSON.parse(data)
+				console.log(weatherData);
+		
+	})
+	}
+})
+
+res.send("Serveris up and running");
+
+_____________________________________________________________________________________________
+Terminal Output
+//JSON Output
+lots of data
+method:
+path:
+statuscode: 	/?Check status code documentation
+etc
+
+data is funny ...why? hexadecimal code
+Convert hexadecimal ->  text
+	//get coordinates
+____________________________________________________________________________________________

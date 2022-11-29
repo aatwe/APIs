@@ -1,0 +1,111 @@
+what is done?
+fetch  live data from open weather api
+format that data and place onto our websites
+
+
+1) User types city
+2) replace query with user input
+
+app.js
+
+const express = require("express");
+const https = require ("https");
+const bodyParser = require("body-parser");
+
+const app= express();
+
+app.use(bodyParser.urlencoded({extended: true}))	//necessary to start parsing through body of post request 
+
+app.get("/", ffunction(req,res)){
+	//here we will try to send file over to browser  //render index.html
+	res.sendFile(__dirname + "/index.html");
+})
+////how to catch post request made by form on our server
+app. post("/", function(req,res) {
+  console.log("post request received");
+
+
+//how to get the text user typed into the input
+//install a package npm i body-parser		//this package allows to look through body of post request and fetch data base Don name of input ie cityName
+
+  console.log(req.body.cityName);
+---
+//below code commented for now
+//we remove the city and also api key from url
+/*
+//Once now we are receiving data from our post request, we can start using it as our query
+		//we have parsed through the body of post request 
+const query = req.body.cityName
+const apiKey = "e727273638..";
+const unit = "metric"
+const url = "https://api.openweathermap.org/data/2.5/weater?q=" + query + "&appid=" + apikey + "&units=" + unit;
+
+
+  https.get(url, function(response)) {
+		console.log(response.statusCode);
+
+		repsonse.on("data", function(data){
+				
+		const weatherdata = JSON.parse(data)
+		const temp= weatherDat.main.temp
+		const weatherDescription = weatherData[0].description	
+		const icon = weatherData.weather[0].icon;
+		const imageURL = "https....."
+		res.send("The temperature in" + query + "is" + temp +"degree Celsius")
+
+
+}
+ 			//res.write("the server is up and running") 
+      			 note // we can only send 1 res.send 
+				//ca nhave multiple res.write  
+   res.write("<p>the weather is currently" +weatherDescription + "<p>);	
+	//pass image element
+   res.write("<h1>The temperature in London is"+ temp +"degree Celsius"</h1>)
+   res.write("<img src=" +imageURL+ ">")
+*/
+	})
+	}
+
+}	
+______________________________________________________________________________________________________________________________
+
+How to update this variable
+//render this index.html when user calls app.xget at root route
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	//when user hits the button we will send a post request
+	//action will take to root route
+	<form action ="/" method ="post">
+
+
+	<label for="cityInput">City Name:</label>
+	<input id = "cityInput"type="text" name="cityName">
+	<button type ="submit">Go</button>
+ </form>
+</body>
+</html>
+__________________________________________________________________________________________
+Final output
+start server nodemon app.js
+//we can see index.html
+cityName label, input box and go button
+
+input : "London" in box click go
+check hyper terminal
+post request is received 
+London		//we are receiving data from our post request
+		//we have parsed through the body of post request 
+
+
+The weather is currently broken clouds
+The temperature in London is 6.97 degree Celsius 

@@ -1,0 +1,5 @@
+what we learnt
+ get hold of data form response from external server
+Get hold in JSON format
+ How  to parse JSON data into JS object
+ get specific piece of data from JS object

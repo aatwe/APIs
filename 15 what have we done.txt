@@ -1,0 +1,15 @@
+get dynamic data based on user input
+catch the data in app post
+use data as query to structure our url
+and get data from particular location
+
+
+
+
+aspects of api covered
+
+1) authentication
+2)paths
+3) queries
+4) parse json data we get back
+5) send data to browser using express and node modules

@@ -1,0 +1,4 @@
+Why test API? on browser very difficult to edit urls
+
+
+How to test APIs? Postman

@@ -1,0 +1,21 @@
+Get data from JSON JS Object
+
+1)
+We have 1 huge nested object
+// we want to travel from main -> temp key
+
+https.get(url, function(response){
+console.log(response.statusCode)
+
+response.on("data", function(data){
+const temp = weatherData.main.temp		using paths
+console.log(temp);
+
+}
+
+2) Copy line path from JSON Viewer awesome 
+	-> Copy path
+
+const temp = weatherData.main.temp	//paste path
+
+3)

@@ -1,0 +1,121 @@
+We have the data, HOw to put data on website
+
+
+Tap into response our server seds -> cliet browser
+
+
+app.get("/", function(req,res){
+
+const url="https://api.openweathermap.org/data/...?q=...."
+
+https.get(url, function(response){
+console.log(response.statusCode)
+
+response.on("data", function(data){
+const weatherdata = JSON.parse(data)
+const temp= weatherDat.main.temp
+const weatherDescriptio = weatherData[0].description
+res.send("The temperature in London is"+ temp +"degree Celsius")
+
+
+}
+//res.send("the server is up and running") 
+       note // we can only send 1 res.send 
+	//ca nhave multiple res.write
+_____________________________________________________________________________
+Output: 
+The temperature in London is 6.27 degree celcius
+______________________________________________________________________________
+how to send same as 1h instead of text?
+just send as html instead
+
+res.send("<h1>The temperature in London is"+ temp +"degree Celsius"</h1>)
+_____________________________________________________________________________________
+
+
+
+app.get("/", function(req,res){
+
+const url="https://api.openweathermap.org/data/...?q=...."
+
+https.get(url, function(response){
+console.log(response.statusCode)
+
+response.on("data", function(data){
+const weatherdata = HSON.parse(data)
+const temp= weatherDat.main.temp
+const weatherDescriptio = weatherData[0].description
+res.send("The temperature in London is"+ temp +"degree Celsius")
+
+
+}
+//res.write("the server is up and running") 
+       note // we can only send 1 res.send 
+	//ca nhave multiple res.write  
+   res.write("<p>the weather is currently" +weatherDescription + "<p>);
+	//once written all things to send
+   res.send()
+______________________________________________________________________________________
+z
+how to display weather images?
+
+"weather": [
+ {
+   "id" : 500,			// different I'd for different condition 
+   "main" : "Rain",
+   "description" : "light rain"
+   "icon" : "10n"		// different Id different icon	
+}
+]
+
+For id 500 -> oderate rain icon ="10d"
+ if icon is 01d.png on open weather api
+just insert it in url like below
+https://api.openweathermap.org/img/wn//10d@2x.png
+openweather map api-> condition codes
+_______________________________________________________________________________________
+how to get hd of icon from weather data
+
+app.get("/", function(req,res){
+
+const url="https://api.openweathermap.org/data/...?q=...."
+
+https.get(url, function(response){
+console.log(response.statusCode)
+
+response.on("data", function(data){
+const weatherdata = JSON.parse(data)
+const temp= weatherDat.main.temp
+const weatherDescriptio = weatherData[0].description
+//Get hold of icon from weather data //
+
+const icon = weatherData.weather[0].icon   //or copy path		//we get the name of the icon
+
+const imageURL = https://api.openweathermap.org/img/wn/" + icon +@2x.png	//paste ths name in image url	
+									
+
+}
+//res.write("the server is up and running") 
+       note // we can only send 1 res.send 
+	//ca nhave multiple res.write  
+   res.write("<p>the weather is currently" +weatherDescription + "<p>);	
+	//pass image element
+   res.write("<h1>The temperature in London is"+ temp +"degree Celsius"</h1>)
+   res.write("<img src=" +imageURL+ ">")
+
+
+	//once written all things to send
+   res.send()
+
+__________________________________________________
+Final output
+te weUsher is currently overcast clouds
+The temperature in London is 6.27 degrees Celcius
+//cloud image below//condition image
+
+________________________________________________________--
+how was this possible?
+get live data using an api
+maje http request to get data as json format
+pass and fetch specific items that we want
+send it back to browser using html

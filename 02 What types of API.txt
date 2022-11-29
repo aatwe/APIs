@@ -1,0 +1,43 @@
+Ex of API
+
+How to Query external APIs?
+
+1) EndPoint of API : 
+GET https://api.kanye.rest                  
+
+
+browser make get request to server, 
+browser sends back a quote
+
+
+
+2) Paths of API	// How to get specific data from server //get precise data
+
+For ex joke api:
+Provide input information on specific data
+
+	a) Choose which type of joke 
+	b)Choose to blacklist some jokes
+	c) Choose response type (json/xml)
+	d) Search particular joke string
+
+Where does data go?
+1) /Planned paths		//Planned paths 
+EndPoint		              Path
+https://v2.jokeapi.dev/joke/Any
+https://v2.jokeapi.dev/joke/Programming
+https://v2.jokeapi.dev/joke/
+
+
+3) Parameters of API.
+//Specify Parameters  //parameters come after ?(Question Mark)
+
+a) if search strings = "debugging"
+
+how are parameters passed? using ?(Question mark)Key value pairs
+
+https://v2.jokeapi.dev/joke/Programming?contains=debugging
+
+b) if optional nsfw  and single also selected
+
+https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw&type=single&contains=debugging

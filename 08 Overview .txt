@@ -1,0 +1,11 @@
+		 --------->			---------------->
+		Request(GET) 			GET Request(API) 
+Client Browser			Your Server				Someone Else's server
+
+		Response(HTMLCSSJS)		Response(HTMLCSSJS)	
+		<----------			<----------------
+
+//
+Temperature in
+Dewas is 29 degree
+Celcius

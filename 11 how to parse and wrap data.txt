@@ -1,0 +1,15 @@
+
+How to get data in form of JS Object instead?
+const weatherData = JSON.parse(data)
+console.log(weatherData);
+
+_____________________________________________________________________________________________
+How to wrap data? JS Object --> String
+const object = {
+	name: "Angela",
+	favouriteFood: "Ramen"
+}
+	console.log(JSON.stringify(object))
+
+____________________________________________________________________________________________
+

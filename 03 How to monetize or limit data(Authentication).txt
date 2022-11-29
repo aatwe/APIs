@@ -1,0 +1,51 @@
+Authentication
+
+They identify you and keep track of you -> charge you
+
+
+Requests per minute:
+If <60 -> API is free
+
+if 600 -> 40$ /month etc
+
+
+How to use authenticated api?
+A) Find API Key
+	1) Sign up
+	2) Sign in
+	3) Find API Key
+		If no default key ->Create new API key
+	4) Copy string
+
+B) Make user request
+	API doc
+		//how to query data?
+		//each way has its own api call
+			a)By city name
+				api call, parameters
+			b)By Coordinates
+				api call, parameters
+			c)By City name
+				api call, parameters
+			d)By City ID
+				api call,parameters
+
+	//Decide how to query
+api call like below
+//Endpoint + 				  //? Parameters		//if seeq , stands for query
+https://api.openweathermap.org/data/2.5/roadrisk?appid={API key}
+C) Paste your API key in app id
+
+
+D) Get your Data
+
+
+
+//What if data is not in correct temperature? Add usign &
+https://api.openweathermap.org/data/2.5/roadrisk?appid={API key}&units =metric
+
+//Does order of parameters matter? no
+just check
+	a) ? at beginning
+	b) separated by &
+
